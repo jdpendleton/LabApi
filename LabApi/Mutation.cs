@@ -27,6 +27,10 @@
         {
             throw new GraphQLException("sample already checked out");
         }
+        if (sample.Archived)
+        {
+            throw new GraphQLException("sample is archived");
+        }
         sample.CheckedOut = true;
         await freezer.UpdateSampleAsync(sample);
         return new CheckoutSamplePayload(sample);
@@ -40,6 +44,10 @@
         {
             throw new GraphQLException("sample already checked in");
         }
+        if (sample.Archived)
+        {
+            throw new GraphQLException("sample is archived");
+        }
         sample.CheckedOut = false;
         await freezer.UpdateSampleAsync(sample);
         return new CheckinSamplePayload(sample);
@@ -52,6 +60,10 @@
         if (sample.CheckedOut)
         {
             throw new GraphQLException("sample is checked out");
+        }
+        if (sample.Archived)
+        {
+            throw new GraphQLException("sample is archived");
         }
         if (sample.Position == input.position)
         {
