@@ -1,6 +1,22 @@
 # LabApi
 An API for managing Freezer Samples
 
+## Architecture
+
+The GraphQL API is divided into three assemblies, dependent on the lower utilizing dependency
+injection in accorrdance with SOLID principals.
+
+
+### LabApi.GraphQL
+Responsible for the GraphQL Schema, all queries, mutations, and subscriptions.
+
+### LabApi.Business
+Organized into services, responsible for connecting the queries, mutations, and
+subscriptions to the data layer and performing business logic
+
+### LabApi.Data
+Implementation for the ISampleRepository is an in-memory singleton repository with basic CRUD operations for simplicity.
+
 ## Context
 
 In a life science laboratory, scientist store their samples in a freezer. These samples are used
