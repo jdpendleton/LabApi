@@ -3,8 +3,7 @@ An API for managing Freezer Samples
 
 ## Architecture
 
-The GraphQL API is divided into three assemblies, dependent on the lower utilizing dependency
-injection in accorrdance with SOLID principals.
+The GraphQL API is divided into three assemblies, each dependent on the lower layer utilizing dependency injection in accordance with SOLID principals.
 
 
 ### LabApi.GraphQL
