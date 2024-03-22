@@ -1,6 +1,6 @@
 ﻿using LabApi.Business.Exceptions;
 
-class SampleNotFoundExceptionFilter : IErrorFilter
+public class SampleNotFoundExceptionFilter : IErrorFilter
 {
     public IError OnError(IError error)
     {
@@ -12,7 +12,7 @@ class SampleNotFoundExceptionFilter : IErrorFilter
     }
 }
 
-class DuplicateSampleExceptionFilter : IErrorFilter
+public class DuplicateSampleExceptionFilter : IErrorFilter
 {
     public IError OnError(IError error)
     {
@@ -24,7 +24,7 @@ class DuplicateSampleExceptionFilter : IErrorFilter
     }
 }
 
-class SampleCheckedOutExceptionFilter : IErrorFilter
+public class SampleCheckedOutExceptionFilter : IErrorFilter
 {
     public IError OnError(IError error)
     {
@@ -36,7 +36,7 @@ class SampleCheckedOutExceptionFilter : IErrorFilter
     }
 }
 
-class SampleArchivedExceptionFilter : IErrorFilter
+public class SampleArchivedExceptionFilter : IErrorFilter
 {
     public IError OnError(IError error)
     {
@@ -48,7 +48,7 @@ class SampleArchivedExceptionFilter : IErrorFilter
     }
 }
 
-class RedundantSampleRequestExceptionFilter : IErrorFilter
+public class RedundantSampleRequestExceptionFilter : IErrorFilter
 {
     public IError OnError(IError error)
     {

@@ -1,0 +1,76 @@
+﻿schema {
+  query: Query
+  mutation: Mutation
+}
+
+type ArchiveSampleResponse {
+  sample: SampleDTO
+  error: String
+}
+
+type CheckinSampleResponse {
+  sample: SampleDTO
+  error: String
+}
+
+type CheckoutSampleResponse {
+  sample: SampleDTO
+  error: String
+}
+
+type CreateSampleResponse {
+  sample: SampleDTO
+  error: String
+}
+
+type MoveSampleResponse {
+  sample: SampleDTO
+  error: String
+}
+
+type Mutation {
+  createSample(request: CreateSampleRequestInput!): CreateSampleResponse!
+  checkoutSample(request: CheckoutSampleRequestInput!): CheckoutSampleResponse!
+  checkinSample(request: CheckinSampleRequestInput!): CheckinSampleResponse!
+  moveSample(request: MoveSampleRequestInput!): MoveSampleResponse!
+  archiveSample(request: ArchiveSampleRequestInput!): ArchiveSampleResponse!
+}
+
+type Query {
+  samples: [SampleDTO!]!
+}
+
+type SampleDTO {
+  name: String!
+  owner: UUID!
+  checkedOut: Boolean!
+  position: Int!
+  archived: Boolean!
+}
+
+input ArchiveSampleRequestInput {
+  name: String!
+}
+
+input CheckinSampleRequestInput {
+  name: String!
+}
+
+input CheckoutSampleRequestInput {
+  name: String!
+}
+
+input CreateSampleRequestInput {
+  name: String!
+  owner: UUID!
+  checkedOut: Boolean
+  position: Int!
+  archived: Boolean
+}
+
+input MoveSampleRequestInput {
+  name: String!
+  position: Int!
+}
+
+scalar UUID @specifiedBy(url: "https:\/\/tools.ietf.org\/html\/rfc4122")
