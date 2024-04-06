@@ -1,5 +1,5 @@
 # LabTec
-An Domain Driven Application for managing Samples 
+A Domain Driven Application for managing Samples 
 
 ## Architecture
 
@@ -7,7 +7,7 @@ The application is divided into five types of assemblies:
 - A Domain Layer/Core Application responsible for business logic
 - A Common/Shared Kernel that stores utilities scoped across multiple concerns
 - An Infrastructure Layer responsible for data persistence, logging, etc.
-- Applicaitons such as APIs and Web Applications responsible for presenting data
+- Applications such as APIs and Web Applications responsible for presenting data
 - A Test Assembly responsible for Unit Tests, Integration Tests, and Quality Assurance
 
 ## Context
