@@ -1,20 +1,14 @@
-# LabApi
-An API for managing Freezer Samples
+# LabTec
+An Domain Driven Application for managing Samples 
 
 ## Architecture
 
-The GraphQL API is divided into three assemblies, each dependent on the lower layer utilizing dependency injection in accordance with SOLID principals.
-
-
-### LabApi.GraphQL
-Responsible for the GraphQL Schema, all queries, mutations, and subscriptions.
-
-### LabApi.Business
-Organized into services, responsible for connecting the queries, mutations, and
-subscriptions to the data layer and performing business logic
-
-### LabApi.Data
-Implementation for the ISampleRepository is an in-memory singleton repository with basic CRUD operations for simplicity.
+The application is divided into five types of assemblies:
+- A Domain Layer/Core Application responsible for business logic
+- A Common/Shared Kernel that stores utilities scoped across multiple concerns
+- An Infrastructure Layer responsible for data persistence, logging, etc.
+- Applicaitons such as APIs and Web Applications responsible for presenting data
+- A Test Assembly responsible for Unit Tests, Integration Tests, and Quality Assurance
 
 ## Context
 
